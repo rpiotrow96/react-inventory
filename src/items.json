@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "tranzystor NPN THT",
+      "price": 0.25,
+      "description": "Tranzystor: NPN; bipolarny; 50V; 0,5A; 0,8/3W; TO39; 12dB",
+      "imageUrl": "https://ce8dc832c.cloudimg.io/v7/_cdn_/18/8E/00/00/0/59521_1.jpg?width=640&height=480&wat=1&wat_url=_tme-wrk_%2Ftme_new.png&wat_scale=100p&ci_sign=854627633bdc3f030ce27ed97b279e857c2b57f9",
+      "producer": "CDIL",
+      "model": "2N1613-CDI1",
+      "documentationURL": "https://www.tme.eu/Document/cef519520a277f0e15db7b22ed28d01c/2N1613.pdf",
+      "weight": "1g"
+    },
+    {
+      "id": 2,
+      "name": "Kondensator 1mF",
+      "price": 0.1,
+      "description": "Kondensator: elektrolityczny; THT; 1000uF; 25VDC; Ø10x20mm; ±20%",
+      "imageUrl": "https://ce8dc832c.cloudimg.io/v7/_cdn_/0D/83/00/00/0/14544_1.jpg?width=640&height=480&wat=1&wat_url=_tme-wrk_%2Ftme_new.png&wat_scale=100p&ci_sign=f51a16f26be051f2d29d8bdb64e178da49cb20d5",
+      "producer": "AISHI",
+      "model": "EWH1EK102G20OT",
+      "documentationURL": "https://www.tme.eu/Document/be199d78e00016d845f8b2cc32fdbc9e/WH.pdf",
+      "weight": "5g"
+    },
+    {
+      "id": 3,
+      "name": "Microchip",
+      "price": 59.99,
+      "description": "IC: mikroprocesor ARM; ARM926; SRAM: 160kB; 1,08÷1,32VDC; SMD",
+      "imageUrl": "https://ce8dc832c.cloudimg.io/v7/_cdn_/BB/BF/A0/00/0/719803_1.jpg?width=640&height=480&wat=1&wat_url=_tme-wrk_%2Ftme_new.png&wat_scale=100p&ci_sign=b7b40dafa2616a7c05c1dc4ac0414598e8bda972",
+      "producer": "MICROCHIP TECHNOLOGY",
+      "model": "AT91SAM9261B-CU",
+      "documentationURL": "https://www.tme.eu/Document/e88eacd320ec81dfebae199a7ec6de68/MPU_Brochure.pdf",
+      "weight": "367g"
+    },
+    {
+      "id": 4,
+      "name": "Multimetr cyfrowy",
+      "price": 299.98,
+      "description": "Multimetr cyfrowy; LCD 3,75 cyfry (3999),podświetlany; 0÷90%",
+      "imageUrl": "https://ce8dc832c.cloudimg.io/v7/_cdn_/39/46/60/00/0/418963_1.jpg?width=640&height=480&wat=1&wat_url=_tme-wrk_%2Ftme_new.png&wat_scale=100p&ci_sign=db2608d618433e0702c002a45d04ff2481dc91a9",
+      "producer": "BEHA-AMPROBE",
+      "model": "34XR",
+      "documentationURL": "https://www.tme.eu/Document/9794b2c662c23f17dd15f86c0a9195b6/34XRA.pdf",
+      "weight": "980g"
+    }
+  ]
+}
