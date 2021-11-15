@@ -1,5 +1,6 @@
 .background {
     background-color: #323539!important;
+    color: white;
 }
 
 thead button.ascending::after {

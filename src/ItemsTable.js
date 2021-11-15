@@ -33,7 +33,18 @@ const useSortedItems = (items, config = null) => {
 function ItemsTable(props) {
 
     const newItems = props.items;
+    let minValue = props.minValue;
+    let maxValue = props.maxValue;
     const { items, requestSort, sortConfig } = useSortedItems(newItems);
+
+    if (minValue === '' || minValue === null) {
+        minValue = 0;
+    }
+    if (maxValue === '' || maxValue === null) {
+        maxValue = Number.POSITIVE_INFINITY;
+    }
+    const filteredItems  = items.filter(o => o.price >= minValue && o.price <= maxValue);
+
     const getClassNamesFor = (name) => {
         if (!sortConfig) {
             return;
@@ -70,7 +81,7 @@ function ItemsTable(props) {
         </thead>
         <tbody>
         {
-            items.map(product => {
+            filteredItems.map(product => {
             return (
                 <tr key={product.id}>
                     <td>{product.id}</td>
