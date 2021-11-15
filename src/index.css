@@ -1,3 +1,13 @@
 .background {
     background-color: #323539!important;
 }
+
+thead button.ascending::after {
+    content: '⬇';
+    margin-left: 2px;
+}
+
+thead button.descending::after {
+    content: '⬆';
+    margin-left: 2px;
+}
