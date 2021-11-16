@@ -7,6 +7,7 @@ export default class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            allItems: props.items,
             items: props.items,
             sortedColumn: 'id',
             direction: 'ascending',
@@ -52,7 +53,7 @@ export default class App extends React.Component {
     }
 
     refreshItems = () => {
-        let sortedItems = [...this.props.items];
+        let sortedItems = [...this.state.allItems];
         sortedItems.sort((a, b) => {
             let column = this.state.sortedColumn;
             if (a[column] < b[column]) {
@@ -75,6 +76,15 @@ export default class App extends React.Component {
         return this.state.sortedColumn === name ? this.state.direction : undefined;
     }
 
+    deleteItem = (id) => {
+        const itemsWithoutDeletedItem = this.state.allItems.filter(item => item.id !== id);
+        this.setState({
+            allItems: itemsWithoutDeletedItem
+        }, () => {
+            this.refreshItems();
+        });
+    }
+
     render() {
         return (
             <div className="container pt-3">
@@ -84,6 +94,7 @@ export default class App extends React.Component {
                     requestSort={this.requestSort}
                     sortItems={this.sortItems}
                     getClassNamesFor={this.getClassNamesFor}
+                    deleteItem={this.deleteItem}
                 />
             </div>
         );

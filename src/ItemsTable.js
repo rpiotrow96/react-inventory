@@ -48,7 +48,7 @@ export default class ItemsTable extends React.Component{
                                     <div className="btn-group">
                                         <button className="btn btn-outline-primary">Pokaż</button>
                                         <button className="btn btn-outline-success">Edytuj</button>
-                                        <button className="btn btn-outline-danger">Usuń</button>
+                                        <button className="btn btn-outline-danger" onClick={() => this.props.deleteItem(product.id)}>Usuń</button>
                                     </div>
                                 </td>
                             </tr>
