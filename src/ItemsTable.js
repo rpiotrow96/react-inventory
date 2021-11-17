@@ -49,7 +49,8 @@ export default class ItemsTable extends React.Component{
                                 <td>
                                     <div className="btn-group">
                                         <button className="btn btn-outline-primary">Pokaż</button>
-                                        <button className="btn btn-outline-success">Edytuj</button>
+                                        <button className="btn btn-outline-success" data-toggle="modal"
+                                                data-target="#exampleModal" onClick={() => this.props.handleEditItem(product)}>Edytuj</button>
                                         <button className="btn btn-outline-danger" onClick={() => this.props.deleteItem(product.id)}>Usuń</button>
                                     </div>
                                 </td>
