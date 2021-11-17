@@ -16,3 +16,8 @@ thead button.descending::after {
 .modal-content {
     background-color: #323539!important;
 }
+
+.error {
+    color: red;
+    font-size: .7em;
+}
