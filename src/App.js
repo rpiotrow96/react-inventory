@@ -1,8 +1,8 @@
-import './App.css';
 import React from 'react';
 import ItemsTable from './ItemsTable'
 import Filters from './Filters'
 import ItemForm from './ItemForm'
+import ItemDisplay from './ItemDisplay'
 
 export default class App extends React.Component {
     constructor(props) {
@@ -17,6 +17,18 @@ export default class App extends React.Component {
             maxValue: Number.POSITIVE_INFINITY,
 
             itemInit: {
+                id: -1,
+                name: '',
+                price: 0,
+                description: '',
+                imageUrl: '',
+                producer: '',
+                model: '',
+                documentationURL: '',
+                weight: ''
+            },
+
+            itemShow: {
                 id: -1,
                 name: '',
                 price: 0,
@@ -153,6 +165,12 @@ export default class App extends React.Component {
         })
     }
 
+    showItem = (item) => {
+        this.setState({
+            itemShow : item
+        })
+    }
+
     render() {
         return (
             <div className="container pt-3">
@@ -169,12 +187,16 @@ export default class App extends React.Component {
                     getClassNamesFor={this.getClassNamesFor}
                     handleEditItem={this.handleEditItem}
                     deleteItem={this.deleteItem}
+                    showItem={this.showItem}
                 />
                 <ItemForm
                     item = {this.state.itemInit}
                     addItem = {this.addItem}
                     editItem = {this.editItem}
                     handleChange = {this.handleChange}
+                />
+                <ItemDisplay
+                    item = {this.state.itemShow}
                 />
             </div>
         );

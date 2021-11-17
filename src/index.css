@@ -21,3 +21,9 @@ thead button.descending::after {
     color: red;
     font-size: .7em;
 }
+
+img{
+    width:100%;
+    max-width:200px;
+    padding-bottom: 15px;
+}
