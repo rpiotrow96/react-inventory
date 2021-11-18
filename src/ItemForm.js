@@ -131,13 +131,17 @@ export default class ItemForm extends React.Component {
     }
 
     render() {
+        let windowName = "Dodaj nowy produkt";
+        if (this.props.item.id > 0) {
+            windowName = "Edycja produktu: " + this.props.item.name;
+        }
         return(
             <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog"
                  aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Dodaj nowy produkt</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">{windowName}</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -160,7 +164,9 @@ export default class ItemForm extends React.Component {
                                 <div className="form-group">
                                     <label htmlFor="price" className="col-form-label">Cena</label>
                                     <input type="number" className="form-control" id="price"
-                                           min="0" step="0.01" value={this.props.item.price} onChange={e => this.handlePriceChange(e.target.value)}/>
+                                           min="0" step="0.01" value={this.props.item.price}
+                                           onChange={e => this.handlePriceChange(e.target.value)}
+                                           onKeyUp={e => this.handlePriceChange(e.target.value)}/>
                                     <div id="priceError" className="error" style={{display: 'none'}}>
                                         <span >Proszę podać cenę</span>
                                     </div>
@@ -173,7 +179,9 @@ export default class ItemForm extends React.Component {
                                 <div className="form-group">
                                     <label htmlFor="imageUrl" className="col-form-label">URL obrazka</label>
                                     <input type="text" className="form-control" id="imageUrl"
-                                           value={this.props.item.imageUrl} onChange={e => this.handleImageUrlChange(e.target.value)}/>
+                                           value={this.props.item.imageUrl}
+                                           onChange={e => this.handleImageUrlChange(e.target.value)}
+                                           onKeyUp={e => this.handleImageUrlChange(e.target.value)}/>
                                     <div id="imageUrlError" className="error" style={{display: 'none'}}>
                                         <span >Proszę podać URL obrazka</span>
                                     </div>
@@ -181,7 +189,9 @@ export default class ItemForm extends React.Component {
                                 <div className="form-group">
                                     <label htmlFor="producer" className="col-form-label">Producent</label>
                                     <input type="text" className="form-control" id="producer"
-                                           value={this.props.item.producer} onChange={e => this.handleProducerChange(e.target.value)}/>
+                                           value={this.props.item.producer}
+                                           onChange={e => this.handleProducerChange(e.target.value)}
+                                           onKeyUp={e => this.handleProducerChange(e.target.value)}/>
                                     <div id="producerError" className="error" style={{display: 'none'}}>
                                         <span >Proszę podać producenta</span>
                                     </div>
@@ -189,7 +199,9 @@ export default class ItemForm extends React.Component {
                                 <div className="form-group">
                                     <label htmlFor="model" className="col-form-label">Model</label>
                                     <input type="text" className="form-control" id="model"
-                                           value={this.props.item.model} onChange={e => this.handleModelChange(e.target.value)}/>
+                                           value={this.props.item.model}
+                                           onChange={e => this.handleModelChange(e.target.value)}
+                                           onKeyUp={e => this.handleModelChange(e.target.value)}/>
                                     <div id="modelError" className="error" style={{display: 'none'}}>
                                         <span >Proszę podać model</span>
                                     </div>
@@ -197,7 +209,9 @@ export default class ItemForm extends React.Component {
                                 <div className="form-group">
                                     <label htmlFor="documentationURL" className="col-form-label">URL Dokumentacji</label>
                                     <input type="text" className="form-control" id="documentationURL"
-                                           value={this.props.item.documentationURL} onChange={e => this.handleDocumentationUrlChange(e.target.value)}/>
+                                           value={this.props.item.documentationURL}
+                                           onChange={e => this.handleDocumentationUrlChange(e.target.value)}
+                                           onKeyUp={e => this.handleDocumentationUrlChange(e.target.value)}/>
                                     <div id="documentationURLError" className="error" style={{display: 'none'}}>
                                         <span >Proszę podać URL do dokumentacji</span>
                                     </div>
@@ -205,7 +219,9 @@ export default class ItemForm extends React.Component {
                                 <div className="form-group">
                                     <label htmlFor="weight" className="col-form-label">Waga</label>
                                     <input type="text" className="form-control" id="weight"
-                                           value={this.props.item.weight} onChange={e => this.handleWeightChange(e.target.value)}/>
+                                           value={this.props.item.weight}
+                                           onChange={e => this.handleWeightChange(e.target.value)}
+                                           onKeyUp={e => this.handleWeightChange(e.target.value)}/>
                                     <div id="weightError" className="error" style={{display: 'none'}}>
                                         <span >Proszę podać wagę</span>
                                     </div>

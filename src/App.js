@@ -174,11 +174,11 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="container pt-3">
-                <Filters setMinValue = {this.setMinValue} setMaxValue = {this.setMaxValue}/>
                 <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                    onClick={this.clearItemForm}>
+                        onClick={this.clearItemForm}>
                     Dodaj
                 </button>
+                <Filters setMinValue = {this.setMinValue} setMaxValue = {this.setMaxValue}/>
 
                 <ItemsTable
                     items ={this.state.items}
